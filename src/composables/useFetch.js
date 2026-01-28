@@ -1,5 +1,6 @@
 export const useFetch = async ({ body, url, method = "GET" }) => {
-  const baseUrl = import.meta.env.VITE_API_BASE || "http://95.163.242.125";
+  const baseUrl = import.meta.env.DEV ? "/api" : "/api";
+
   try {
     const data = await fetch(`${baseUrl}/${url}`, {
       method,
