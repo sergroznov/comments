@@ -1,5 +1,5 @@
 export const useFetch = async ({ body, url, method = "GET" }) => {
-  const baseUrl = import.meta.env.DEV ? "/api" : "/api";
+  const baseUrl = "https://corsproxy.io/?http://95.163.242.125";
 
   try {
     const data = await fetch(`${baseUrl}/${url}`, {
